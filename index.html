@@ -3,46 +3,174 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <!-- Webpage Title (will show on tab) -->
     <title>Professional Portfolio</title>
     <style>
         /* Basic styling for the page */
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            line-height: 1.6;
-        }
-        header {
-            background: #333;
-            color: #fff;
-            padding: 1rem 0;
-            text-align: center;
-        }
-        nav {
-            margin: 1rem 0;
-        }
-        nav a {
-            color: #fff;
-            text-decoration: none;
-            margin: 0 1rem;
-        }
-        section {
-            padding: 2rem;
-            border-bottom: 1px solid #ddd;
-        }
-        footer {
-            text-align: center;
-            padding: 1rem;
-            background: #333;
-            color: #fff;
-        }
+      body {
+      font-family: 'Roboto', Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+
+      /* DARK MODE BASE */
+      background: #0f0f10;
+      color: #e6e6e6;
+      }
+      
+      /* Retro green glow effect */
+      header h1,
+      h2 {
+          color: #5cfa9e;
+          text-shadow:
+              0 0 5px rgba(92, 250, 158, 0.6),
+              0 0 10px rgba(92, 250, 158, 0.4),
+              0 0 20px rgba(92, 250, 158, 0.3);
+      }
+
+      /* Header */
+      header {
+          background: linear-gradient(135deg, #1a1a1a, #111);
+          color: #fff;
+          padding: 2.5rem 1rem;
+          text-align: center;
+          border-bottom: 1px solid #2a2a2a;
+      }
+
+      /* Name */
+      header h1 {
+          position: relative;
+          display: inline-block;
+          padding: 1rem 2rem;
+          margin: 0;
+      }
+
+      header h1::before,
+      header h1::after {
+          content: "";
+          position: absolute;
+          left: -20%;
+          width: 140%;
+          height: 2px;
+
+          background: linear-gradient(
+              to right,
+              transparent,
+              #5cfa9e,
+              transparent
+          );
+
+          /* green glow */
+          box-shadow:
+              0 0 6px rgba(92, 250, 158, 0.6),
+              0 0 14px rgba(92, 250, 158, 0.4);
+
+          opacity: 0.7;
+
+          animation: linePulse 3.5s ease-in-out infinite;
+      }
+    
+
+      header h1::before {
+          top: 0;
+      }
+
+      header h1::after {
+          bottom: 0;
+      }
+
+      /* Navigation */
+      nav {
+          margin-top: 1rem;
+      }
+
+      nav a {
+          color: #d0d0d0;
+          text-decoration: none;
+          margin: 0 1rem;
+          opacity: 0.8;
+          transition: opacity 0.2s ease, color 0.2s ease;
+      }
+
+      nav a:hover {
+          opacity: 1;
+          color: #ffffff;
+      }
+
+      /* Sections (dark cards) */
+      section {
+          padding: 2.5rem;
+          margin: 1.5rem auto;
+          max-width: 900px;
+
+          background: #161617;
+          border-radius: 10px;
+
+          /* darker, more visible borders */
+          border: 1px solid #2b2b2b;
+
+          box-shadow: 0 6px 18px rgba(0,0,0,0.4);
+          transition: transform 0.2s ease, border-color 0.2s ease;
+      }
+
+      section:hover {
+          transform: translateY(-2px);
+          border-color: #3a3a3a;
+      }
+      
+       #about {
+       text-align: center;
+      }
+
+      /* Headings */
+      h2 {
+          color: #f0f0f0;
+      }
+
+      /* Links inside sections */
+      a {
+          color: #7fb3ff;
+      }
+
+      a:hover {
+          color: #a8c9ff;
+      }
+      
+      @keyframes linePulse {
+      0%, 100% {
+          opacity: 0.5;
+          filter: brightness(0.9);
+          box-shadow:
+              0 0 4px rgba(92, 250, 158, 0.4),
+              0 0 10px rgba(92, 250, 158, 0.3);
+      }
+
+    50% {
+        opacity: 1;
+        filter: brightness(1.3);
+        box-shadow:
+            0 0 8px rgba(92, 250, 158, 0.8),
+            0 0 18px rgba(92, 250, 158, 0.6),
+            0 0 30px rgba(92, 250, 158, 0.3);
+    }
+}
+
+      /* Footer */
+      footer {
+          text-align: center;
+          padding: 1.5rem;
+          background: #0b0b0c;
+          color: #bdbdbd;
+          margin-top: 2rem;
+          border-top: 1px solid #2a2a2a;
+      }
     </style>
 </head>
 <body>
     <!-- Header Section -->
     <header>
-        <h1>Welcome to My Portfolio</h1>
+        <h1>Quan Nguyen's Portfolio</h1>
         <nav>
             <a href="#about">About Me</a>
             <a href="#projects">Projects</a>
@@ -56,8 +184,7 @@
         <h2>About Me</h2>
         <p>
             <!-- Add a brief introduction about yourself here -->
-            Hello! My name is Quan Nguyen. I am passionate about working with various sorts of media and technology to bridge together programs, software, and stories. 
-            Welcome to my portfolio website!
+            Hey there. My name is Quan Nguyen. I am a passionate, self-motivated, and deeply creative individual working with a large variety of mediums in technology to bridge together hardware, software, visual arts, and stories. I am a graduate from Patrick Henry High School and incoming freshman at Cal Poly SLO for the class of 2030. I will be a future Computer Engineering major. I love the Touhou Project, Plants vs. Zombies, and Sonic the Hedgehog franchise. In my free time, I like to create digital art, animate, make videos, work on my own media project: BrokenLens, read, and write for fun. I also do taekwondo martial arts, bike, and have military leadership experience from NJROTC!
         </p>
     </section>
 
@@ -75,16 +202,38 @@
     </section>
 
     <!-- Credentials Section -->
-    <section id="credentials">
-        <h2>Credentials</h2>
-        <p>
-            <!-- Add your credentials, certifications, or achievements here -->
-            I have earned the following certifications and achievements:
-        </p>
-        <ul>
-            <li>Certification 1: [Details]</li>
-            <li>Certification 2: [Details]</li>
-            <li>Certification 3: [Details]</li>
+    <ul class="credentials-list">
+      <li class="credential-card">
+          <h3>High School Diploma</h3>
+          <p>Class of 2026, Patrick Henry High School — completed 44 required credits.</p>
+      </li>
+
+      <li class="credential-card">
+          <h3>Honor Roll</h3>
+          <p>Multiple semesters with a 4.0 GPA or higher.</p>
+      </li>
+
+      <li class="credential-card">
+          <h3>Software & Systems Development Pathway</h3>
+          <p>Completed CCTE pathway at Patrick Henry High School.</p>
+      </li>
+
+      <li class="credential-card">
+          <h3>SDUSD Honors Show Art Award</h3>
+          <p>Selected for Comic-Con Museum display for outstanding visual artwork.</p>
+      </li>
+
+      <li class="credential-card">
+          <h3>MAC Excellence Award (Taekwondo)</h3>
+          <p>Recognized for mastery in kicking and form combinations.</p>
+      </li>
+
+      <li class="credential-card">
+          <h3>NJROTC Recognition Certificate</h3>
+          <p>Strong academic and leadership performance; passed inspections successfully.</p>
+      </li>
+  </ul>
+            
             <!-- Add images of your certification digital badges -->
         </ul>
     </section>
@@ -97,14 +246,13 @@
             Feel free to reach out to me:
         </p>
         <ul>
-            <li>Email: [your-email@example.com]</li>
-            <li>LinkedIn: <a href="[your-linkedin-profile]" target="_blank">[Your LinkedIn]</a></li>
+            <li>Email: quan.m.nguyen020@gmail.com</li>
         </ul>
     </section>
 
     <!-- Footer Section -->
     <footer>
-        <p>&copy; 2025 [Your Name]. All rights reserved.</p>
+        <p>&copy; 2025 Quan Nguyen. All rights reserved.</p>
     </footer>
 </body>
 </html>
