@@ -81,23 +81,28 @@
       }
 
       /* Navigation */
-      nav {
-          margin-top: 1rem;
-      }
-
       nav a {
-          color: #d0d0d0;
-          text-decoration: none;
-          margin: 0 1rem;
-          opacity: 0.8;
-          transition: opacity 0.2s ease, color 0.2s ease;
+      color: #e6e6e6;
+      text-decoration: none;
+
+      margin: 0 1rem;
+      opacity: 0.6;
+
+      transition: all 0.25s ease;
       }
 
       nav a:hover {
           opacity: 1;
           color: #ffffff;
-      }
 
+          text-shadow:
+              0 0 6px rgba(92, 250, 158, 0.6),
+              0 0 14px rgba(92, 250, 158, 0.5),
+              0 0 28px rgba(92, 250, 158, 0.35);
+
+          animation: linePulse 3.5s ease-in-out infinite;
+      }
+      
       /* Sections (dark cards) */
       section {
           padding: 2.5rem;
@@ -146,15 +151,68 @@
               0 0 10px rgba(92, 250, 158, 0.3);
       }
 
-    50% {
-        opacity: 1;
-        filter: brightness(1.3);
-        box-shadow:
-            0 0 8px rgba(92, 250, 158, 0.8),
-            0 0 18px rgba(92, 250, 158, 0.6),
-            0 0 30px rgba(92, 250, 158, 0.3);
-    }
-}
+          50% {
+              opacity: 1;
+              filter: brightness(1.3);
+              box-shadow:
+                  0 0 8px rgba(92, 250, 158, 0.8),
+                  0 0 18px rgba(92, 250, 158, 0.6),
+                  0 0 30px rgba(92, 250, 158, 0.3);
+                }
+            }
+
+            .credentials-list {
+          list-style: none;
+          padding: 0;
+          margin: 0;
+
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+          gap: 1.2rem;
+      }
+
+      .credential-card {
+          background: #1a1a1b;
+          border: 1px solid #2b2b2b;
+          border-radius: 12px;
+          padding: 1.2rem;
+
+          box-shadow: 0 6px 18px rgba(0,0,0,0.35);
+
+          transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+          position: relative;
+          overflow: hidden;
+      }
+
+      /* subtle glow accent line */
+      .credential-card::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 3px;
+          width: 100%;
+          background: linear-gradient(90deg, transparent, #5cfa9e, transparent);
+          opacity: 0.6;
+      }
+
+      .credential-card:hover {
+          transform: translateY(-5px);
+          border-color: #5cfa9e;
+          box-shadow: 0 10px 30px rgba(92, 250, 158, 0.15);
+      }
+
+      .credential-card h3 {
+          margin: 0 0 0.5rem 0;
+          color: #5cfa9e;
+          font-size: 1.05rem;
+      }
+
+      .credential-card p {
+          margin: 0;
+          color: #cfcfcf;
+          font-size: 0.95rem;
+      }
 
       /* Footer */
       footer {
@@ -201,42 +259,44 @@
         </ul>
     </section>
 
-    <!-- Credentials Section -->
-    <ul class="credentials-list">
-      <li class="credential-card">
-          <h3>High School Diploma</h3>
-          <p>Class of 2026, Patrick Henry High School — completed 44 required credits.</p>
-      </li>
+     <!-- Credentials Section -->
+      <section id="credentials">
+          <h2>Credentials</h2>
 
-      <li class="credential-card">
-          <h3>Honor Roll</h3>
-          <p>Multiple semesters with a 4.0 GPA or higher.</p>
-      </li>
+          <ul class="credentials-list">
+              <li class="credential-card">
+                  <h3>High School Diploma</h3>
+                  <p>Class of 2026, Patrick Henry High School — completed 44 required credits.</p>
+              </li>
 
-      <li class="credential-card">
-          <h3>Software & Systems Development Pathway</h3>
-          <p>Completed CCTE pathway at Patrick Henry High School.</p>
-      </li>
+              <li class="credential-card">
+                  <h3>Honor Roll</h3>
+                  <p>Multiple semesters with a 4.0 GPA or higher.</p>
+              </li>
 
-      <li class="credential-card">
-          <h3>SDUSD Honors Show Art Award</h3>
-          <p>Selected for Comic-Con Museum display for outstanding visual artwork.</p>
-      </li>
+              <li class="credential-card">
+                  <h3>Software & Systems Development Pathway Completion Award</h3>
+                  <p>Completed CCTE pathway at Patrick Henry High School.</p>
+              </li>
 
-      <li class="credential-card">
-          <h3>MAC Excellence Award (Taekwondo)</h3>
-          <p>Recognized for mastery in kicking and form combinations.</p>
-      </li>
+              <li class="credential-card">
+                  <h3>SDUSD Honors Show Art Award</h3>
+                  <p>Selected for Comic-Con Museum display for outstanding visual artwork.</p>
+              </li>
 
-      <li class="credential-card">
-          <h3>NJROTC Recognition Certificate</h3>
-          <p>Strong academic and leadership performance; passed inspections successfully.</p>
-      </li>
-  </ul>
-            
-            <!-- Add images of your certification digital badges -->
-        </ul>
-    </section>
+              <li class="credential-card">
+                  <h3>MAC Excellence Award (Taekwondo)</h3>
+                  <p>Recognized for mastery in kicking and form combinations.</p>
+              </li>
+
+              <li class="credential-card">
+                  <h3>NJROTC Recognition Certificate</h3>
+                  <p>Strong academic and leadership performance; passed inspections successfully.</p>
+              </li>
+          </ul>
+      </section>
+      <!-- Add images of your certification digital badges -->
+
 
     <!-- Contact Info Section -->
     <section id="contact">
