@@ -177,6 +177,44 @@
           grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
           gap: 1.2rem;
       }
+      
+      .project-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .project-card {
+            background: #1a1a1b;
+            border: 1px solid #2b2b2b;
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-top: 1.2rem;
+        
+            box-shadow: 0 6px 18px rgba(0,0,0,0.35);
+        
+            transition:
+                transform 0.25s ease,
+                border-color 0.25s ease,
+                box-shadow 0.25s ease;
+        }
+        
+        .project-card:hover {
+            transform: translateY(-5px);
+            border-color: #5cfa9e;
+        
+            box-shadow:
+                0 10px 30px rgba(92, 250, 158, 0.15);
+        }
+        
+        .project-card h3 {
+            margin-top: 0;
+            color: #5cfa9e;
+        }
+        
+        .project-card p {
+            color: #d0d0d0;
+        }
 
       .credential-card {
           background: #1a1a1b;
@@ -254,17 +292,148 @@
     </section>
 
     <!-- Projects Section -->
-    <section id="projects">
-        <h2>Projects</h2>
-        <p>
-            <!-- Add a list or description of your projects here -->
-            Here are some of the projects I have worked on:
-        </p>
-        <ul>
-            <li>Project 1: [Brief description] <a href="[link to project repository]" target="_blank">[Project repository]</a></li>
-            <li>Project 2: [Brief description] <a href="[link to project repository]" target="_blank">[Project repository]</a></li>
-        </ul>
-    </section>
+<section id="projects">
+    <h2>Projects</h2>
+
+    <p>
+        Here are some of the projects I have worked on across
+        software development, game design, visual art, and
+        interactive media.
+    </p>
+
+    <ul class="project-list">
+
+        <!-- ForgeCraft -->
+        <li class="project-card">
+            <h3><i>ForgeCraft (2025)</i></h3>
+
+            <p>
+                Fantasy blacksmith simulation game built in Java
+                as my AP Computer Science A Capstone project.
+                Features object-oriented design, randomized customer
+                interactions, crafting systems, and score-based
+                gameplay inside a text-based management simulator.
+            </p>
+
+            <p>
+                <b>Role:</b> Lead Developer
+            </p>
+
+            <a href="https://github.com/phAPCSAperiod2/final-project-Peri-0z"
+               target="_blank">
+               View GitHub Repository
+            </a>
+        </li>
+
+        <!-- Fields of Seenu -->
+        <li class="project-card">
+            <h3><i>Fields of Seenu</i> (2023–2025)</h3>
+
+            <p>
+                Multiplayer Roblox combat game with
+                approximately 800 total players.
+            </p>
+
+            <p>
+                <b>Role:</b> Lead Developer — Gameplay Systems,
+                Visual Design, &amp; Worldbuilding
+            </p>
+
+            <p>
+                Led full-cycle development, combining gameplay
+                programming with visual direction. Built combat
+                systems, designed large-scale maps, and created
+                VFX/SFX to reinforce immersion and game feel.
+                Also developed character concepts and visual assets
+                to maintain a cohesive artistic identity.
+            </p>
+            
+            <a href="https://www.roblox.com/games/15282541902/Fields-of-Seenu"
+               target="_blank">
+               View Roblox Game
+            </a>
+        </li>
+
+        <!-- Seenu Battlegrounds -->
+        <li class="project-card">
+            <h3><i>Seenu Battlegrounds</i> (2020–2023)</h3>
+
+            <p>
+                Roblox combat game with approximately
+                25,000 total players.
+            </p>
+
+            <p>
+                <b>Role:</b> Lead Developer — Systems &
+                Visual Foundations
+            </p>
+
+            <p>
+                Developed the original framework for combat
+                mechanics, map design, and VFX systems.
+                This project established the technical and
+                artistic foundation later expanded in
+                <i>Fields of Seenu</i>.
+            </p>
+            
+            <a href="https://www.roblox.com/games/5968698969/Seenu-Battlegrounds"
+               target="_blank">
+               View Roblox Game
+            </a>
+        </li>
+
+        <!-- Swordburst 2 -->
+        <li class="project-card">
+            <h3><i>Swordburst 2</i> (2022–2023)</h3>
+
+            <p>
+                Large-scale Roblox RPG project with over
+                155 million total players project-wide.
+            </p>
+
+            <p>
+                <b>Role:</b> Contributor — Animation &
+                Environment Design
+            </p>
+
+            <p>
+                Contributed to Floor 12 by creating mob
+                animations, assisting with environment design,
+                and developing concepts that aligned gameplay
+                progression with visual storytelling.
+            </p>
+            
+            <a href="https://www.roblox.com/games/659222129/Swordburst-2"
+               target="_blank">
+               View Roblox Game
+            </a>
+        </li>
+
+        <!-- Color Powers Fight -->
+        <li class="project-card">
+            <h3><i>Color Powers: Fight!</i> (2021–2023)</h3>
+
+            <p>
+                Roblox action/combat project with approximately
+                10,000 total players.
+            </p>
+
+            <p>
+                <b>Role:</b> Co-Developer — Gameplay &
+                Visual Systems
+            </p>
+
+            <p>
+                Worked across both programming and art pipelines,
+                including animation, VFX, and character asset
+                creation. Helped shape combat mechanics while
+                ensuring strong visual feedback and gameplay clarity.
+            </p>
+            
+        </li>
+
+    </ul>
+</section>
 
      <!-- Credentials Section -->
       <section id="credentials">
